@@ -1,0 +1,16 @@
+logging:
+   level: INFO
+   
+   appenders:
+      - type: console
+        threshold: INFO
+        target: stdout
+        
+      - type: file
+        currentLogFilename: ./logs/property-server.log
+        archivedLogFilenamePattern: ./logs/archive/property-server-%d.log.gz
+        archivedFileCount: 10
+        timeZone: UTC
+   
+
+gitUrl: file:///mnt/nas/repos/properties.git

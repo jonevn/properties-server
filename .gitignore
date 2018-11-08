@@ -1,4 +1,6 @@
-target
+target/
 .classpath
 .settings
 .project
+properties/
+logs/
