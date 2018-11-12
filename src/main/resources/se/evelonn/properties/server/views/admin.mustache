@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		
+		<title>Properties server</title>
+	</head>
+	<body>
+		<h1>Configure properties server</h1>
+
+		
+		Select branch:<br>
+		<div class="btn-group dropright">
+	  		<button type="button" class="btn btn-primary">
+	    		{{currentBranch}}
+	  		</button>
+	  		<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    		<span class="sr-only">Toggle Dropright</span>
+	  		</button>
+	  		<div class="dropdown-menu">
+	  			{{#availableBranches}}
+	  				<form method="post" action="/admin/branch/{{displayName}}" target="_self">
+	  					<button class="dropdown-item" type="submit">{{displayName}}</button>
+	  				</form>
+				{{/availableBranches}}  				
+	  		</div>
+		</div>
+		
+		<br><br>
+		<form method="post" action="/admin/update" target="_self">
+			<button type="submit" class="btn btn-primary">Pull and update properties</button>
+		</form>
+		<br><br>
+		<form method="post" action="/admin/clear" target="_self">
+			<button type="submit" class="btn btn-primary">Clear properties</button>
+		</form>
+		<br><br>
+		<table class='table table-striped table-bordered'>
+			<thead>
+				<tr>
+					<th scope="col">Key</th>
+					<th scope="col">Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#properties}}
+					<tr>
+						<td>{{key}}</td>
+						<td>{{value}}</td>
+					</tr>
+				{{/properties}}
+			</tbody>
+		</table>
+	</body>
+</hmtl>

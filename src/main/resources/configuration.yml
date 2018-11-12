@@ -1,9 +1,12 @@
 logging:
    level: INFO
    
+   loggers:
+      "se.evelonn.properties.server": DEBUG
+   
    appenders:
       - type: console
-        threshold: INFO
+        threshold: DEBUG
         target: stdout
         
       - type: file
@@ -13,4 +16,11 @@ logging:
         timeZone: UTC
    
 
-gitUrl: file:///mnt/nas/repos/properties.git
+git:
+   repositoryUrl: file:///mnt/nas/repos/properties.git
+   branch: master
+   pathToCloneTo: .
+
+properties:
+   filePattern: .*
+   includedFolders: /*
