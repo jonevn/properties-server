@@ -1,38 +1,26 @@
 package se.evelonn.properties.server.config;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import java.util.Arrays;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PropertiesConfiguration {
 
-    @NotEmpty
     @JsonProperty
-    private String filePattern;
+    private String[] excludedFilePatterns;
 
-    @NotEmpty
-    @JsonProperty
-    private String includedFolders;
-
-    public String getFilePattern() {
-	return filePattern;
+    public List<String> getExcludedFilePatterns() {
+	return Arrays.asList(excludedFilePatterns);
     }
 
-    public void setFilePattern(String filePattern) {
-	this.filePattern = filePattern;
-    }
-
-    public String getIncludedFolders() {
-	return includedFolders;
-    }
-
-    public void setIncludedFolders(String includedFolders) {
-	this.includedFolders = includedFolders;
+    public void setExcludedFilePatterns(String[] excludedFilePatterns) {
+	this.excludedFilePatterns = excludedFilePatterns;
     }
 
     @Override
     public String toString() {
-	return String.format("PropertiesConfiguration [filePattern=%s, includedFolders=%s]", filePattern,
-		includedFolders);
+	return String.format("PropertiesConfiguration [excludedFilePatterns=%s]",
+		Arrays.toString(excludedFilePatterns));
     }
 }

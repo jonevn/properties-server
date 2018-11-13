@@ -34,7 +34,7 @@ public class PropertiesServerApplication extends Application<PropertiesServerCon
 	logger.info("Starting application with configuration:\n" + configuration);
 
 	GitService gitService = new GitService(configuration.getGit());
-	PropertiesService propertiesService = new PropertiesService(gitService);
+	PropertiesService propertiesService = new PropertiesService(configuration.getProperties(), gitService);
 
 	// Resources
 	environment.jersey().register(new PropertyResource(propertiesService));

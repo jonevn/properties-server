@@ -22,5 +22,7 @@ git:
    pathToCloneTo: .
 
 properties:
-   filePattern: .*
-   includedFolders: /*
+   excludedFilePatterns: 
+      - .*/other.properties
+      - .*/exclude/.*
+      
