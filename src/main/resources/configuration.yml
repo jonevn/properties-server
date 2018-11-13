@@ -2,7 +2,7 @@ logging:
    level: INFO
    
    loggers:
-      "se.evelonn.properties.server": DEBUG
+      "com.github.jonevn.properties.server": DEBUG
    
    appenders:
       - type: console
