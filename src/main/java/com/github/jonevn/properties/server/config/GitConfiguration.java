@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.config;
+package com.github.jonevn.properties.server.config;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

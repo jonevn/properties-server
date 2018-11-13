@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.service;
+package com.github.jonevn.properties.server.service;
 
 import java.io.FileInputStream;
 import java.nio.file.DirectoryStream;
@@ -9,7 +9,7 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import se.evelonn.properties.server.config.PropertiesConfiguration;
+import com.github.jonevn.properties.server.config.PropertiesConfiguration;
 
 public class PropertiesService {
 

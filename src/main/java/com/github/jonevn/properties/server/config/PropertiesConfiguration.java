@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.config;
+package com.github.jonevn.properties.server.config;
 
 import java.util.Arrays;
 import java.util.List;

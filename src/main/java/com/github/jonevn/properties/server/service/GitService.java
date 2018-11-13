@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.service;
+package com.github.jonevn.properties.server.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import org.eclipse.jgit.api.PullResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import se.evelonn.properties.server.config.GitConfiguration;
+import com.github.jonevn.properties.server.config.GitConfiguration;
 
 public class GitService {
 

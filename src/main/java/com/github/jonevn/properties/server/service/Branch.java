@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.service;
+package com.github.jonevn.properties.server.service;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

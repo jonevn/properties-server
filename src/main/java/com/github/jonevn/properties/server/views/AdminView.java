@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.views;
+package com.github.jonevn.properties.server.views;
 
 import java.util.List;
 import java.util.Set;
@@ -6,10 +6,11 @@ import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.ListBranchCommand.ListMode;
 
+import com.github.jonevn.properties.server.service.Branch;
+import com.github.jonevn.properties.server.service.GitService;
+import com.github.jonevn.properties.server.service.PropertiesService;
+
 import io.dropwizard.views.View;
-import se.evelonn.properties.server.service.Branch;
-import se.evelonn.properties.server.service.GitService;
-import se.evelonn.properties.server.service.PropertiesService;
 
 public class AdminView extends View {
 

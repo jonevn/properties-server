@@ -1,20 +1,21 @@
-package se.evelonn.properties.server;
+package com.github.jonevn.properties.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.github.jonevn.properties.server.config.PropertiesServerConfiguration;
+import com.github.jonevn.properties.server.health.PropertiesServerHealthCheck;
+import com.github.jonevn.properties.server.resources.AdminViewResource;
+import com.github.jonevn.properties.server.resources.PropertyResource;
+import com.github.jonevn.properties.server.service.GitService;
+import com.github.jonevn.properties.server.service.PropertiesService;
+import com.github.jonevn.properties.server.tasks.ClearTask;
+import com.github.jonevn.properties.server.tasks.PullAndReloadTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
-import se.evelonn.properties.server.config.PropertiesServerConfiguration;
-import se.evelonn.properties.server.health.PropertiesServerHealthCheck;
-import se.evelonn.properties.server.resources.AdminViewResource;
-import se.evelonn.properties.server.resources.PropertyResource;
-import se.evelonn.properties.server.service.GitService;
-import se.evelonn.properties.server.service.PropertiesService;
-import se.evelonn.properties.server.tasks.ClearTask;
-import se.evelonn.properties.server.tasks.PullAndReloadTask;
 
 public class PropertiesServerApplication extends Application<PropertiesServerConfiguration> {
 

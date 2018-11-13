@@ -1,11 +1,11 @@
-package se.evelonn.properties.server.tasks;
+package com.github.jonevn.properties.server.tasks;
 
 import java.io.PrintWriter;
 
+import com.github.jonevn.properties.server.service.PropertiesService;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
-import se.evelonn.properties.server.service.PropertiesService;
 
 public class PullAndReloadTask extends Task {
 

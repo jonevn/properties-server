@@ -1,4 +1,4 @@
-package se.evelonn.properties.server.resources;
+package com.github.jonevn.properties.server.resources;
 
 import java.net.URI;
 
@@ -9,9 +9,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import se.evelonn.properties.server.service.GitService;
-import se.evelonn.properties.server.service.PropertiesService;
-import se.evelonn.properties.server.views.AdminView;
+import com.github.jonevn.properties.server.service.GitService;
+import com.github.jonevn.properties.server.service.PropertiesService;
+import com.github.jonevn.properties.server.views.AdminView;
 
 @Path("admin")
 public class AdminViewResource {

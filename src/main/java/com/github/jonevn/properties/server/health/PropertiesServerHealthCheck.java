@@ -1,8 +1,7 @@
-package se.evelonn.properties.server.health;
+package com.github.jonevn.properties.server.health;
 
 import com.codahale.metrics.health.HealthCheck;
-
-import se.evelonn.properties.server.service.PropertiesService;
+import com.github.jonevn.properties.server.service.PropertiesService;
 
 public class PropertiesServerHealthCheck extends HealthCheck {
 
