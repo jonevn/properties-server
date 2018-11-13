@@ -12,7 +12,7 @@ public class PullAndReloadTask extends Task {
     private PropertiesService propertiesService;
 
     public PullAndReloadTask(PropertiesService propertiesService) {
-	super("PullAndUpdate");
+	super("pullAndReload");
 	this.propertiesService = propertiesService;
     }
 
